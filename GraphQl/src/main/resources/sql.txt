@@ -1,0 +1,43 @@
+http://localhost:8080/graphiql
+
+#write query on by one
+
+#select car
+{
+	car(id : 1)
+	{
+		id
+		name
+	}
+}
+
+#select all car
+{
+	cars
+	{
+		id
+		name
+	}
+}
+
+
+#save car
+mutation{
+  saveCar(car :{name : "custom car"}){
+    id
+    name
+  }
+}
+
+#udpate car
+mutation{
+  saveCar(car :{id: 5, name : "Updated car"}){
+    id
+    name
+  }
+}
+
+#delete car
+mutation{
+  deleteCar(id:4)
+}
